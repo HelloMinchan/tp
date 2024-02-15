@@ -3,25 +3,43 @@ import styled from "@emotion/styled";
 import { Outlet } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import { Link } from "react-router-dom";
+
 export function Header({ children }) {
   return (
     <>
       <HeaderContainer>
         <HeaderContent>
           <MenuIcon sx={{ color: "#898c8a", fontSize: "30px" }} />
-          <HeaderLogo
-            src={
-              "https://i.namu.wiki/i/2SBi3yMQgknjVCOx5eu-fqn64n7piih0FMM3lYccxeKnLOZaNHol0N5Z0gZRURs78a3t2pjO7lH_xEZKuaXmmw.svg"
-            }
-          />
+          <Link to="/">
+            <HeaderLogo
+              src={
+                "https://i.namu.wiki/i/2SBi3yMQgknjVCOx5eu-fqn64n7piih0FMM3lYccxeKnLOZaNHol0N5Z0gZRURs78a3t2pjO7lH_xEZKuaXmmw.svg"
+              }
+            />
+          </Link>
           <SearchIcon sx={{ color: "#898c8a", fontSize: "30px" }} />
         </HeaderContent>
         <HeaderMenu>
-          <HeaderMenuSelectedSection>타임페이</HeaderMenuSelectedSection>
-          <HeaderMenuSection>이벤트</HeaderMenuSection>
-          <HeaderMenuSection>패스트오더</HeaderMenuSection>
-          <HeaderMenuSection>기프트샵</HeaderMenuSection>
-          <HeaderMenuSection>@CGV</HeaderMenuSection>
+          <Link to="/">
+            <HeaderMenuSelectedSection>타임페이</HeaderMenuSelectedSection>
+          </Link>
+
+          <Link to="https://m.cgv.co.kr/WebApp/EventNotiV4/eventMain.aspx">
+            <HeaderMenuSection>이벤트</HeaderMenuSection>
+          </Link>
+
+          <Link to="https://morder.cgv.co.kr/morder/mordermain;JSESSIONIDPC=955A340283270B31DDD881BA9D317395.moprd">
+            <HeaderMenuSection>패스트오더</HeaderMenuSection>
+          </Link>
+
+          <Link to="https://m.cgv.co.kr/WebApp/GiftV5/storeMain.aspx">
+            <HeaderMenuSection>기프트샵</HeaderMenuSection>
+          </Link>
+
+          <Link to="https://m.cgv.co.kr/WebApp/MainV5/CGVguide.aspx">
+            <HeaderMenuSection>@CGV</HeaderMenuSection>
+          </Link>
         </HeaderMenu>
       </HeaderContainer>
 
@@ -43,7 +61,7 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderContent = styled.div`
-  padding: 0 5% 0 5%;
+  padding: 2px 5% 0 5%;
   height: 44px;
   display: flex;
   align-items: center;
