@@ -21,9 +21,9 @@ export function Header({ children }) {
           <SearchIcon sx={{ color: "#898c8a", fontSize: "30px" }} />
         </HeaderContent>
         <HeaderMenu>
-          <Link to="/">
-            <HeaderMenuSelectedSection>타임페이</HeaderMenuSelectedSection>
-          </Link>
+          <HeaderMenuSelectedSection onClick={() => window.location.reload()}>
+            타임페이
+          </HeaderMenuSelectedSection>
 
           <Link to="https://m.cgv.co.kr/WebApp/EventNotiV4/eventMain.aspx">
             <HeaderMenuSection>이벤트</HeaderMenuSection>
