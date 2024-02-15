@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function App() {
   const [isMinus, setIsMinus] = useState(false);
-  const [seconds, setSeconds] = useState(10);
+  const [seconds, setSeconds] = useState(5);
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
